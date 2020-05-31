@@ -1,13 +1,15 @@
-import SceneA from './sceneA.js'
-import SceneB from './sceneB.js'
+import Bootloader from './bootloader.js'
 
 const config = {
-    width: 800,
-    height: 600,
+    width: 640,
+    height: 400,
     parent: "container",
-    type: Phaser.AUTO,
-    backgroundColor: "#392542",
-    scene: [SceneA, SceneB]
+    physics: {
+        default: "arcade"
+    },
+    scene: [
+        Bootloader
+    ]
 }
 
 new Phaser.Game(config)
