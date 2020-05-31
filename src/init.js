@@ -12,7 +12,7 @@ const config = {
         default: "arcade",
         arcade: {
             gravity: {
-                y: 500
+                //y: 500
             }
         }
     }
@@ -25,17 +25,30 @@ function preload() {
 }
 
 function create() {
-    this.bird = this.physics.add.image(50, 100, "bird")
-    this.bird.setScale(2)
-    this.bird.flipX = false
-    this.bird.setOrigin(0.5)
-    // Physics
-    this.bird.setCollideWorldBounds(true)
-    this.bird.setBounce(0.3)
-    //this.bird.setVelocity(50, 0)
-    this.bird.setAcceleration(50,0)
+    this.bird = this.physics.add.image(100, 50, "bird")
+
+    // this.input.keyboard.on("keydown_RIGHT", () => {
+    //     this.bird.setAcceleration(100, 0)
+    // })
+
+    // this.input.keyboard.on("keyup_RIGHT", () => {
+    //     this.bird.setAcceleration(0, 0)
+    //     this.bird.setVelocity(0)
+    // })
+
+    //this.cursor = this.input.keyboard.createCursorKeys()
+
+    this.right = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D)
+    this.left = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A)
 }
 
 function update() {
-
+    //this.cursor.right.isDown
+    if (this.right.isDown) {
+        this.bird.x++
+        this.bird.flipX = false
+    } else if (this.left.isDown) {
+        this.bird.x--
+        this.bird.flipX = true
+    }
 }
