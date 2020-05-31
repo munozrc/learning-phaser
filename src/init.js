@@ -1,3 +1,6 @@
+import SceneA from './sceneA.js'
+import SceneB from './sceneB.js'
+
 const config = {
     width: 800,
     height: 600,

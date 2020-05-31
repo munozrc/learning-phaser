@@ -1,3 +1,5 @@
+import SceneC from './sceneC.js'
+
 class SceneA extends Phaser.Scene {
 
     constructor() {
@@ -21,10 +23,12 @@ class SceneA extends Phaser.Scene {
         this.add.text(120, 105, "A", { font: "96px Courier", fill: "#000000"})
     
         this.scene.add("SceneC", new SceneC)
-        this.scene.start("SceneC")
+        //this.scene.start("SceneC")
     }
 
     update(time, delta) {
 
     }
 }
+
+export default SceneA

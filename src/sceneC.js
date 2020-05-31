@@ -3,7 +3,7 @@ class SceneC extends Phaser.Scene {
     constructor() {
         super({
             key: "SceneC",
-            //active: true
+            active: true
         })
     }
 
@@ -26,3 +26,5 @@ class SceneC extends Phaser.Scene {
 
     }
 }
+
+export default SceneC
