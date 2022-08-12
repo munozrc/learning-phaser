@@ -18,7 +18,7 @@ class SceneA extends Phaser.Scene {
         graphics.fillStyle(0xff3300, 1)
 
         graphics.fillRect(100, 200, 600, 300)
-        graphics.fillRect(100, 100, 100, 100)
+        graphics.fillRect(110, 110, 110, 110)
 
         this.add.text(120, 105, "A", { font: "96px Courier", fill: "#000000"})
     
